@@ -720,11 +720,35 @@ void display(void)
 		x, y, z);
 	Piece wQueen(wqueen, x,y,z);
 	wQueen.Draw();
-	*/
-
-	// Set the color for one side (black), and draw its 16 pieces.
 
 	/*
+
+	QuadraticInterpolate(t, A+1, A+3,
+		1, 1, 1,
+		1, 1.5, 1,
+		1, 2, 1,
+		x, y, z);
+	glPushMatrix();
+	glTranslatef(4000+500, 0, 4000+500);
+    glRotated(180, 0, 1, 0);
+	glScaled(x,y,z);
+	glCallList(brook);
+	glPopMatrix();
+
+	QuadraticInterpolate(t, A+4, A+6,
+		0, 1, 1,
+		45, 1.5, 1,
+		90, 2, 1,
+		x, y, z);
+	glPushMatrix();
+	glTranslatef(3000+500, 0, 3000+500);
+    glRotated(x, 0, 0, 1);
+	glCallList(bking);
+	glPopMatrix();
+
+
+
+
 	Interpolate(t, 4.0, 6.0, x, 4000, 2000);
 	glPushMatrix();
 	glTranslatef(x, 0, 8000);
